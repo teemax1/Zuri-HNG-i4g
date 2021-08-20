@@ -9,6 +9,10 @@ $name = $email = $subject = $message = '';
 	$errors = array('name' => '', 'email' => '', 'subject' => '','message' => '');
 
 	if(isset($_POST['submit'])){
+	  $name = $_POST['name'];
+	  $email = $_POST['email'];
+	  $subject = $_POST['subject'];
+	  $message = $_POST['message'];
 	  	  		// check name
 		if(empty($_POST['name'])){
 			$errors['name'] = '* A name is required';
@@ -71,7 +75,7 @@ if (array_filter($errors)) {
     if ($query) {
       
       
-       $_SESSION['user'] = $name;
+      // $_SESSION['user'] = $name;
         header('Location: form.php');
     } else {
         echo '<p>Your form was not submitted!!!</p>';
