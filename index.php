@@ -1,3 +1,99 @@
+<?php
+//connect to my server
+$conn = mysqli_connect('remotemysql.com','qXY9ubiY6y','5Z4PoW6Jm9','qXY9ubiY6y');
+if (!$conn) {
+  echo 'Error in connection to host'. mysqli_connect_error($conn);
+}
+
+$name = $email = $subject=$message = '';
+	$errors = array('name' => '', 'email' => '', 'subject' => '','message' => '');
+
+	if(isset($_POST['submit'])){
+	  	  		// check name
+		if(empty($_POST['name'])){
+			$errors['name'] = '* A name is required';
+		} else{
+			$name = $_POST['name'];
+			if(!preg_match('/^[A-Za-z\s]+$/', $name)){
+				$errors['name'] = '* Name must be letters  only';
+			}
+		}
+		
+		// check email
+		if(empty($_POST['email'])){
+			$errors['email'] = '* An email is required';
+		} else{
+			$email = $_POST['email'];
+			if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+				$errors['email'] = '* Email must be a valid email address';
+			}
+		}
+  	  		// check subject
+		if(empty($_POST['subject'])){
+			$errors['subject'] = '* A subject is required';
+		} else{
+			$name = $_POST['subject'];
+			if(!preg_match('/^[A-Za-z\s]+$/', $subject)){
+				$errors['subject'] = '* subject must be letters  only';
+			}
+		}
+		  	  		// check name
+		if(empty($_POST['message'])){
+			$errors['message'] = '* A message is required';
+		} else{
+			$name = $_POST['message'];
+			if(!preg_match('/^[A-Za-z\s]+$/', $message)){
+				$errors['message'] = '* Message must be letters  only';
+			}
+		}
+		
+
+		
+if (array_filter($errors)) {
+  
+}else{
+	  
+	  
+	  
+	  
+
+    
+  
+    
+    
+	  
+	  $sql = "INSERT INTO `resume`(`name`,`email`,`subject`,`message`)VALUES('$name','$email','$subject','$message')";
+	  
+
+
+    $query= mysqli_query($conn, $sql);
+   
+    if ($query) {
+      
+      $_SESSION['loggedin'] = $email;
+       $_SESSION['user'] = $name;
+        header('Location: form.php');
+    } else {
+        echo '<section>You Failed to sign up!!!</section>';
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+?>
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -87,35 +183,30 @@
 		
 		<section id="contact">
 		  <h2>Contact Form</h2>
-	<form action="contactform.php" method="POST" accept-charset="utf-8">
+	<form action="" method="POST" accept-charset="utf-8">
 	  <input type="text" name="name" id="name" value="" placeholder="Enter your name" />
 	  <div>
-	    <?php echo $errors;?>
+	    <?php echo $errors['name'];?>
 	  </div>
 	  <br /> 	  <br />
 	  	  <input type="email" name="email" id="email" value="" placeholder="Enter your email" />
 	  	    <div>
-	    <?php echo $errors;?>
+	    <?php echo $errors['email'];?>
 	  </div>
 	  	  <br /> 	  <br />
 	  	  	  <input type="text" name="subject" id="sub" value="" placeholder="Enter the subject of your message" />
 	  	  	    <div>
-	    <?php echo $errors;?>
+	    <?php echo $errors['subject'];?>
 	  </div>
-	  	  	  <br />  <br />
+	  	  	  <br /> 	 <br />
 	  	  	  <textarea name="message" id= rows="8" placeholder="Enter your message" cols="30"></textarea>
 	  	  	    <div>
-	    <?php echo $errors;?>
+	    <?php echo $errors['message'];?>
 	  </div>
 	  	  	  <button type="submit" name="submit">Submit</button>
 	</form>
 		</section>
 
 	</div>
-
-  <script src="jquery.min.js"></script>
-  <script src="jquery.js"></script>
-  <script src="validate.js"></script>
-  <script src="main.js"></script>
 </body>
 </html>
