@@ -35,7 +35,7 @@
 			</div>
 			
 			<div id="photo">
-				<img src="images/omotola.jpg" alt="Omotola Moses-Fadulu resume photo avatar" itemprop="image" />
+				<img src="omotola.jpg" alt="Omotola Moses-Fadulu resume photo avatar" itemprop="image" />
 			</div>
 		</header>
 		
