@@ -1,5 +1,8 @@
 <?php
 //connect to my server
+
+
+
 $conn = mysqli_connect('remotemysql.com','qXY9ubiY6y','5Z4PoW6Jm9','qXY9ubiY6y');
 if (!$conn) {
   echo 'Error in connection to host'. mysqli_connect_error($conn);
@@ -135,7 +138,15 @@ if (array_filter($errors)) {
 			</div>
 			
 			<div id="photo">
-				<img src="omotola.jpg" alt="Omotola Moses-Fadulu resume photo avatar" itemprop="image" />
+				<img src="zuri.png" alt="zuri photo avatar" itemprop="image" />
+			</div>
+					
+			<div id="photo">
+				<img src="hng.png" alt="hng photo avatar" itemprop="image" />
+			</div>
+					
+			<div id="photo">
+				<img src="i4g.png" alt="i4 photo avatar" itemprop="image" />
 			</div>
 		</header>
 		
