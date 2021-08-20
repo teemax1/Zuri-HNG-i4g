@@ -116,5 +116,6 @@
   <script src="jquery.min.js"></script>
   <script src="jquery.js"></script>
   <script src="validate.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
