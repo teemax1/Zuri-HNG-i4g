@@ -87,7 +87,7 @@
 		
 		<section id="contact">
 		  <h2>Contact Form</h2>
-	<form action="contactform.php" method="POST" accept-charset="utf-8">
+	<form action="" method="POST" accept-charset="utf-8">
 	  <input type="text" name="name" id="name" value="" placeholder="Enter your name" />
 	  <div>
 	    <?php echo $errors;?>
