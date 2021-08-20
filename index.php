@@ -102,7 +102,7 @@
 	  	  	    <div>
 	    <?php echo $errors;?>
 	  </div>
-	  	  	  <br /> 	  <br /> 	  <br />
+	  	  	  <br />  <br />
 	  	  	  <textarea name="message" id= rows="8" placeholder="Enter your message" cols="30"></textarea>
 	  	  	    <div>
 	    <?php echo $errors;?>
