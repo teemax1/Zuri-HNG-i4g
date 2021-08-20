@@ -46,7 +46,7 @@ background-color: #fff;
 border: 1px solid #ccc;
 padding: 5px; 
 }
-#photo img{
+#photohouse{
   display: flex;
   justify-content: space-between;
   max-width: 20%;
