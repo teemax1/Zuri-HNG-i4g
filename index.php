@@ -5,7 +5,7 @@ if (!$conn) {
   echo 'Error in connection to host'. mysqli_connect_error($conn);
 }
 
-$name = $email = $subject=$message = '';
+$name = $email = $subject = $message = '';
 	$errors = array('name' => '', 'email' => '', 'subject' => '','message' => '');
 
 	if(isset($_POST['submit'])){
@@ -32,7 +32,7 @@ $name = $email = $subject=$message = '';
 		if(empty($_POST['subject'])){
 			$errors['subject'] = '* A subject is required';
 		} else{
-			$name = $_POST['subject'];
+			$subject = $_POST['subject'];
 			if(!preg_match('/^[A-Za-z0-9\s]+$/', $subject)){
 				$errors['subject'] = '* subject must be letters  only';
 			}
@@ -41,7 +41,7 @@ $name = $email = $subject=$message = '';
 		if(empty($_POST['message'])){
 			$errors['message'] = '* A message is required';
 		} else{
-			$name = $_POST['message'];
+			$message = $_POST['message'];
 			if(!preg_match('/^[A-Za-z0-9\s]+$/', $message)){
 				$errors['message'] = '* Message must be letters  only';
 			}
