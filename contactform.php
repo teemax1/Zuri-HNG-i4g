@@ -13,7 +13,7 @@
   }
 
   $contactform = new PHP_Mail_Form;
-  //$contactform->ajax = true;
+  $contactform->ajax = true;
 
   // Replace with your real receiving email address
   $contactform->to = 'teemaxtechng@gmail.com';
