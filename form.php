@@ -1,6 +1,6 @@
 <?php
 //connect to my server
-$conn = mysqli_connect('localhost','qXY9ubiY6y','5Z4PoW6Jm9','qXY9ubiY6y');
+$conn = mysqli_connect('remotemysql.com','qXY9ubiY6y','5Z4PoW6Jm9','qXY9ubiY6y');
 if (!$conn) {
   echo 'Error in connection to host'. mysqli_connect_error($conn);
 }
