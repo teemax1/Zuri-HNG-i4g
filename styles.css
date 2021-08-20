@@ -47,10 +47,10 @@ border: 1px solid #ccc;
 padding: 5px; 
 }
 #photohouse{
-  display: flex;
+  display: grid;
   justify-content: space-between;
-  max-width: 20%;
-  max-height: 20%;
+  max-width: 8%;
+  max-height: 8%;
   
 }
 
