@@ -70,7 +70,7 @@ if (array_filter($errors)) {
    
     if ($query) {
       
-      session_start();
+      
        $_SESSION['user'] = $name;
         header('Location: form.php');
     } else {
