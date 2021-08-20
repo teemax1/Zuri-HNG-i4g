@@ -188,7 +188,7 @@ if (array_filter($errors)) {
 		<section id="contact">
 		  <h2>Contact Form</h2>
 	<form action="" method="POST" accept-charset="utf-8">
-	  <input type="text" name="name" id="name" vvalue="<?php echo htmlspecialchars ($name) ?>" placeholder="Enter your name" />
+	  <input type="text" name="name" id="name" value="<?php echo htmlspecialchars ($name) ?>" placeholder="Enter your name" />
 	  <div>
 	    <?php echo $errors['name'];?>
 	  </div>
