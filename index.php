@@ -33,7 +33,7 @@ $name = $email = $subject=$message = '';
 			$errors['subject'] = '* A subject is required';
 		} else{
 			$name = $_POST['subject'];
-			if(!preg_match('/^[A-Za-z\s]+$/', $subject)){
+			if(!preg_match('/^[A-Za-z0-9\s]+$/', $subject)){
 				$errors['subject'] = '* subject must be letters  only';
 			}
 		}
@@ -42,7 +42,7 @@ $name = $email = $subject=$message = '';
 			$errors['message'] = '* A message is required';
 		} else{
 			$name = $_POST['message'];
-			if(!preg_match('/^[A-Za-z\s]+$/', $message)){
+			if(!preg_match('/^[A-Za-z0-9\s]+$/', $message)){
 				$errors['message'] = '* Message must be letters  only';
 			}
 		}
@@ -74,7 +74,7 @@ if (array_filter($errors)) {
        $_SESSION['user'] = $name;
         header('Location: form.php');
     } else {
-        echo '<section>You Failed to sign up!!!</section>';
+        echo '<p>Your form was not submitted!!!</p>';
     }
 }
 }
@@ -199,7 +199,7 @@ if (array_filter($errors)) {
 	    <?php echo $errors['subject'];?>
 	  </div>
 	  	  	  <br /> 	 <br />
-	  	  	  <textarea name="message" id= rows="8" value="<?php echo htmlspecialchars ($messa) ?>" placeholder="Enter your message" cols="30"></textarea>
+	  	  	  <textarea name="message" id= rows="8" value="<?php echo htmlspecialchars ($message) ?>" placeholder="Enter your message" cols="30"></textarea>
 	  	  	    <div>
 	    <?php echo $errors['message'];?>
 	  </div>
