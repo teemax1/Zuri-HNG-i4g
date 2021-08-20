@@ -70,7 +70,7 @@ if (array_filter($errors)) {
    
     if ($query) {
       
-      $_SESSION['loggedin'] = $email;
+      session_start();
        $_SESSION['user'] = $name;
         header('Location: form.php');
     } else {
