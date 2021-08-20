@@ -184,22 +184,22 @@ if (array_filter($errors)) {
 		<section id="contact">
 		  <h2>Contact Form</h2>
 	<form action="" method="POST" accept-charset="utf-8">
-	  <input type="text" name="name" id="name" value="" placeholder="Enter your name" />
+	  <input type="text" name="name" id="name" vvalue="<?php echo htmlspecialchars ($name) ?>" placeholder="Enter your name" />
 	  <div>
 	    <?php echo $errors['name'];?>
 	  </div>
 	  <br /> 	  <br />
-	  	  <input type="email" name="email" id="email" value="" placeholder="Enter your email" />
+	  	  <input type="email" name="email" id="email" value="<?php echo htmlspecialchars ($email) ?>" placeholder="Enter your email" />
 	  	    <div>
 	    <?php echo $errors['email'];?>
 	  </div>
 	  	  <br /> 	  <br />
-	  	  	  <input type="text" name="subject" id="sub" value="" placeholder="Enter the subject of your message" />
+	  	  	  <input type="text" name="subject" id="sub" value="<?php echo htmlspecialchars ($subject) ?>" placeholder="Enter the subject of your message" />
 	  	  	    <div>
 	    <?php echo $errors['subject'];?>
 	  </div>
 	  	  	  <br /> 	 <br />
-	  	  	  <textarea name="message" id= rows="8" placeholder="Enter your message" cols="30"></textarea>
+	  	  	  <textarea name="message" id= rows="8" value="<?php echo htmlspecialchars ($messa) ?>" placeholder="Enter your message" cols="30"></textarea>
 	  	  	    <div>
 	    <?php echo $errors['message'];?>
 	  </div>
