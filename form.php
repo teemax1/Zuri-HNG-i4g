@@ -7,8 +7,8 @@ if (!$conn) {
 
 
 
-session_start();
-$_SESSION['user'] = $name;
+//session_start();
+//$_SESSION['user'] = $name;
 
 
 ?>
