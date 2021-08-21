@@ -179,7 +179,7 @@ if (array_filter($errors)) {
 			<section id="skills-right">
 				<h4 itemprop="about">Software</h4>
 				<ul>
-					<li itemprop="itemListElement">MS365</li>
+					<li itemprop="itemListElement">M365</li>
 					
 					<li itemprop="itemListElement">MS Office 2007-2010</li>
 					<li itemprop="itemListElement">cPanel &amp; phpMyAdmin</li>
@@ -224,7 +224,10 @@ if (array_filter($errors)) {
 	  	  	    <div>
 	    <?php echo $errors['message'];?>
 	  </div>
-	  	  	  <button type="submit" name="submit">Submit</button>
+	  
+	  <div id="but">	  <button type="submit" name="submit">Submit</button>
+	  </div>
+	  	  
 	</form>
 		</section>
 

@@ -19,6 +19,7 @@
 nav {
   display: flex;
   justify-content: space-between;
+  font-size: 1.75em;
 }
 
 h2{
