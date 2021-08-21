@@ -136,18 +136,12 @@ if (array_filter($errors)) {
 				<small><span itemprop="email">mikealomotola@gmail.com</span></small>
 				<small><a href="http://teeportfolio.epizy.com" itemprop="url">My Portfolio</a> &bull; <a href="https://www.linkedin.com/in/moses-fadulu-omotola-08a794177" itemprop="url">Moses-Fadulu Omotola</a></small>
 			</div>
-			
+				
 			<div id="photo">
-				<img src="zuri.png" alt="zuri photo avatar" itemprop="image" />
+				<img src="omotola.jpg" alt="Omotola Moses-Fadulu photo avatar" itemprop="image" />
 			</div>
 					
-			<div id="photo">
-				<img src="hng.png" alt="hng photo avatar" itemprop="image" />
-			</div>
-					
-			<div id="photo">
-				<img src="i4g.png" alt="i4 photo avatar" itemprop="image" />
-			</div>
+	
 		</header>
 		
 		<section id="profile">
@@ -156,6 +150,18 @@ if (array_filter($errors)) {
 			
 			<p>I am currently doing my internship at <a href="https://internship.zuri.team">  Zuri Internship</a> a remote internship firm</p>
 		</section>
+				<div id="photohouse">
+				  		<div id="photo">
+				<img src="zuri.png" alt="zuri photo avatar" />
+			</div>
+				  		<div id="photo">
+				<img src="hng.png" alt="hng photo avatar" />
+			</div>
+					
+			<div id="photo">
+				<img src="i4g.png" alt="i4g photo avatar"  />
+			</div>
+			</div>
 		
 		<section id="skills" class="clearfix" itemscope itemtype="http://schema.org/ItemList">
 			<h2 itemprop="name">Skills</h2>
