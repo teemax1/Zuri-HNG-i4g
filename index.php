@@ -158,7 +158,7 @@ if (array_filter($errors)) {
 				<img src="hng.png" alt="hng photo avatar" />
 			</div>
 					
-			<div id="photo">
+			<div id="photo3">
 				<img src="i4g.png" alt="i4g photo avatar"  />
 			</div>
 			</div>
